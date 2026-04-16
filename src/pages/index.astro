@@ -66,6 +66,11 @@ const github = "https://github.com/hazeltr0n";
     <meta name="twitter:description" content={ogDescription} />
     <meta name="twitter:image" content={`${siteUrl}/james.png`} />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
     <!-- HubSpot tracking (portal 245729528) -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/245729528.js"></script>
     <style>
@@ -82,16 +87,37 @@ const github = "https://github.com/hazeltr0n";
         --color-muted: #888;
         --color-accent: #3b82f6;
         --color-accent-glow: rgba(59, 130, 246, 0.15);
+        --color-warm: #d97706;
+        --color-warm-glow: rgba(217, 119, 6, 0.18);
         --color-border: #2a2a2a;
-        --max-width: 800px;
+        --max-width: 860px;
+        --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
       }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-family: var(--font-sans);
         background: var(--color-bg);
         color: var(--color-text);
         line-height: 1.7;
         min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Subtle scroll-in for sections — modern browsers only; reduced-motion-safe */
+      @supports (animation-timeline: view()) {
+        @media (prefers-reduced-motion: no-preference) {
+          main > section, main > header {
+            animation: fadeUp linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 40%;
+          }
+        }
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
       }
 
       main {
@@ -102,8 +128,8 @@ const github = "https://github.com/hazeltr0n";
 
       .hero {
         display: grid;
-        grid-template-columns: 140px 1fr;
-        gap: 2.5rem;
+        grid-template-columns: 180px 1fr;
+        gap: 2.75rem;
         align-items: center;
         margin-bottom: 5rem;
         padding-bottom: 3rem;
@@ -111,19 +137,21 @@ const github = "https://github.com/hazeltr0n";
       }
 
       .headshot {
-        width: 140px;
-        height: 140px;
+        width: 180px;
+        height: 180px;
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid var(--color-border);
-        box-shadow: 0 0 40px var(--color-accent-glow);
+        box-shadow: 0 0 60px var(--color-accent-glow), 0 0 30px var(--color-warm-glow);
       }
 
       .hero-text h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        letter-spacing: -0.03em;
-        margin-bottom: 0.25rem;
+        font-family: var(--font-serif);
+        font-size: 3.25rem;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        margin-bottom: 0.5rem;
         background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -152,9 +180,21 @@ const github = "https://github.com/hazeltr0n";
         font-size: 0.75rem;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.12em;
         color: var(--color-muted);
         margin-bottom: 2rem;
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+      }
+
+      h2 .num {
+        font-family: var(--font-serif);
+        font-size: 1.1rem;
+        text-transform: none;
+        letter-spacing: 0;
+        color: var(--color-warm);
+        font-weight: 400;
       }
 
       .specialties {
@@ -382,7 +422,7 @@ const github = "https://github.com/hazeltr0n";
 
       .btn-primary:hover {
         background: #2563eb;
-        box-shadow: 0 0 30px var(--color-accent-glow);
+        box-shadow: 0 0 40px var(--color-warm-glow), 0 0 20px var(--color-accent-glow);
       }
 
       .btn-secondary {
@@ -506,7 +546,12 @@ const github = "https://github.com/hazeltr0n";
         }
 
         .hero-text h1 {
-          font-size: 2rem;
+          font-size: 2.5rem;
+        }
+
+        .headshot {
+          width: 140px;
+          height: 140px;
         }
 
         .specialties {
@@ -538,7 +583,7 @@ const github = "https://github.com/hazeltr0n";
       </section>
 
       <section>
-        <h2>What I Do</h2>
+        <h2><span class="num">01</span> What I Do</h2>
         <div class="specialties">
           {specialties.map((s) => (
             <div class="specialty">
@@ -550,7 +595,7 @@ const github = "https://github.com/hazeltr0n";
       </section>
 
       <section>
-        <h2>Recent Work</h2>
+        <h2><span class="num">02</span> Recent Work</h2>
         <div class="work">
           {recentWork.map((w) => (
             <div class="work-item">
@@ -564,7 +609,7 @@ const github = "https://github.com/hazeltr0n";
       </section>
 
       <section>
-        <h2>Work With Me</h2>
+        <h2><span class="num">03</span> Work With Me</h2>
         <div class="cta-pitch">
           <p>Short engagements that ship something real: a working prototype, a production system, or a strategy grounded in how the work actually happens. No decks-for-decks-sake.</p>
           <div class="cta-buttons">
@@ -575,7 +620,7 @@ const github = "https://github.com/hazeltr0n";
       </section>
 
       <section class="contact">
-        <h2>Connect</h2>
+        <h2><span class="num">04</span> Connect</h2>
         <div class="contact-links">
           <a href={linkedin} target="_blank" rel="noopener">LinkedIn</a>
           <a href={github} target="_blank" rel="noopener">GitHub</a>
