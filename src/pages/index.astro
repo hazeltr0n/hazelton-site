@@ -1,48 +1,4 @@
 ---
-const name = "James Hazelton";
-const title = "Revenue Operations & GTM Systems Consultant";
-const tagline = "I design revenue systems that replace broken processes with intelligence.";
-
-const ogDescription = "Revenue operations and GTM systems for companies outgrowing their spreadsheets but not ready for a full-time ops hire. Pipelines, data intelligence, and AI-powered automation — built to scale without scaling headcount.";
-const siteUrl = "https://hazeltonres.com";
-
-const bookingUrl = "https://meetings-na2.hubspot.com/james-hazelton";
-
-const specialties = [
-  {
-    title: "Revenue Operations Systems",
-    description: "Pipeline architecture, ICP and lead scoring, routing, CRM rebuilds. The systems your GTM team actually runs on — designed around how the work happens, not how the vendor demo shows it."
-  },
-  {
-    title: "Data Intelligence Without the Vendor Stack",
-    description: "Custom scraping and enrichment pipelines that outperform ZoomInfo / Apollo at a fraction of the cost. Built for named-account strategies where generic lists don't cut it."
-  },
-  {
-    title: "AI-Powered Ops Automation",
-    description: "Replacing manual workflows with AI tooling. At one engagement, 240 hours of weekly manual work went to zero — no engineering team, near-zero software spend."
-  }
-];
-
-const recentWork = [
-  {
-    title: "GTM Infrastructure from Zero",
-    blurb: "Built the revenue operations stack for a nonprofit social enterprise launching a new employer services line. ICP scoring on a 2.4M-record federal regulatory database, real-time job market data (100K+ postings scanned weekly), weighted signal stacking, and tiered lead segmentation mapped to differentiated outreach playbooks.",
-    href: null
-  },
-  {
-    title: "Enterprise Account +30%",
-    blurb: "Grew a named enterprise account 30% with zero tooling budget. Replaced a ZoomInfo-style vendor stack with a custom scraping + enrichment pipeline. Targeted outreach executed across a multi-state region.",
-    href: null
-  },
-  {
-    title: "Ops Automation — 240 Hrs/Wk Eliminated",
-    blurb: "Built AI-powered candidate profiling, a video interview platform, and a data pipeline that eliminated 240 hours of weekly manual work. No engineering support, near-zero software cost.",
-    href: null
-  }
-];
-
-const linkedin = "https://www.linkedin.com/in/hazeltron/";
-const github = "https://github.com/hazeltr0n";
 ---
 
 <html lang="en">
@@ -50,29 +6,8 @@ const github = "https://github.com/hazeltr0n";
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={ogDescription} />
-    <title>{name} | {title}</title>
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl} />
-    <meta property="og:title" content={`${name} | ${title}`} />
-    <meta property="og:description" content={ogDescription} />
-    <meta property="og:image" content={`${siteUrl}/james.png`} />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`${name} | ${title}`} />
-    <meta name="twitter:description" content={ogDescription} />
-    <meta name="twitter:image" content={`${siteUrl}/james.png`} />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-
-    <!-- HubSpot tracking (portal 245729528) -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/245729528.js"></script>
+    <meta name="description" content="Hazelton Senior Citizens — Hazelton, North Dakota" />
+    <title>Hazelton Senior Citizens</title>
     <style>
       * {
         margin: 0;
@@ -80,640 +15,92 @@ const github = "https://github.com/hazeltr0n";
         box-sizing: border-box;
       }
 
-      :root {
-        --color-bg: #0a0a0a;
-        --color-surface: #141414;
-        --color-text: #f5f5f5;
-        --color-muted: #888;
-        --color-accent: #3b82f6;
-        --color-accent-glow: rgba(59, 130, 246, 0.15);
-        --color-warm: #d97706;
-        --color-warm-glow: rgba(217, 119, 6, 0.18);
-        --color-border: #2a2a2a;
-        --max-width: 860px;
-        --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
-      }
-
       body {
-        font-family: var(--font-sans);
-        background: var(--color-bg);
-        color: var(--color-text);
-        line-height: 1.7;
+        font-family: Georgia, 'Times New Roman', serif;
+        background: #f9f6f1;
+        color: #2c2c2c;
         min-height: 100vh;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      /* Subtle scroll-in for sections — modern browsers only; reduced-motion-safe */
-      @supports (animation-timeline: view()) {
-        @media (prefers-reduced-motion: no-preference) {
-          main > section, main > header {
-            animation: fadeUp linear both;
-            animation-timeline: view();
-            animation-range: entry 0% entry 40%;
-          }
-        }
-      }
-
-      @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(24px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      main {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 4rem 2rem;
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: 180px 1fr;
-        gap: 2.75rem;
+        display: flex;
         align-items: center;
-        margin-bottom: 5rem;
-        padding-bottom: 3rem;
-        border-bottom: 1px solid var(--color-border);
+        justify-content: center;
+        padding: 2rem;
       }
 
-      .headshot {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--color-border);
-        box-shadow: 0 0 60px var(--color-accent-glow), 0 0 30px var(--color-warm-glow);
+      .card {
+        text-align: center;
+        max-width: 480px;
+        width: 100%;
       }
 
-      .hero-text h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        letter-spacing: -0.03em;
-        line-height: 1.05;
+      h1 {
+        font-size: 2rem;
+        font-weight: normal;
+        letter-spacing: 0.02em;
         margin-bottom: 0.5rem;
-        background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #1a1a1a;
       }
 
-      .title {
-        font-size: 1.1rem;
-        color: var(--color-accent);
-        margin-bottom: 1rem;
-        font-weight: 500;
+      .address {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 2rem;
       }
 
-      .tagline {
-        font-size: 1.05rem;
-        color: var(--color-muted);
-        max-width: 540px;
+      .divider {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 1.5rem auto;
+        width: 60px;
+      }
+
+      .status {
+        font-size: 1rem;
+        color: #666;
+        font-style: italic;
+        margin-bottom: 1.5rem;
         line-height: 1.6;
       }
 
-      section {
-        margin-bottom: 4rem;
-      }
-
-      h2 {
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: var(--color-muted);
-        margin-bottom: 2rem;
-        display: flex;
-        align-items: baseline;
-        gap: 0.75rem;
-      }
-
-      h2 .num {
-        font-family: var(--font-serif);
-        font-size: 1.1rem;
-        text-transform: none;
-        letter-spacing: 0;
-        color: var(--color-warm);
-        font-weight: 400;
-      }
-
-      .specialties {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-      }
-
-      .specialty {
-        background: var(--color-surface);
-        border: 1px solid var(--color-border);
-        border-radius: 12px;
-        padding: 1.5rem;
-        transition: all 0.2s ease;
-      }
-
-      .specialty:hover {
-        border-color: var(--color-accent);
-        box-shadow: 0 0 30px var(--color-accent-glow);
-        transform: translateY(-2px);
-      }
-
-      .specialty h3 {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        color: var(--color-text);
-      }
-
-      .specialty p {
-        font-size: 0.9rem;
-        color: var(--color-muted);
-        line-height: 1.5;
-      }
-
       .contact {
-        padding-top: 2rem;
-        border-top: 1px solid var(--color-border);
+        font-size: 0.95rem;
+        color: #555;
       }
 
-      .contact-links {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
+      .contact-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #999;
+        margin-bottom: 0.4rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       }
 
       .contact a {
-        color: var(--color-accent);
+        color: #4a7c59;
         text-decoration: none;
         font-size: 1rem;
-        font-weight: 500;
-        transition: color 0.2s ease;
       }
 
       .contact a:hover {
-        color: #60a5fa;
-      }
-
-      .contact-form {
-        margin-top: 2rem;
-        display: grid;
-        gap: 1rem;
-        max-width: 500px;
-      }
-
-      .contact-form input,
-      .contact-form textarea {
-        background: var(--color-surface);
-        border: 1px solid var(--color-border);
-        border-radius: 8px;
-        padding: 0.875rem 1rem;
-        font-size: 1rem;
-        color: var(--color-text);
-        font-family: inherit;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .contact-form input:focus,
-      .contact-form textarea:focus {
-        outline: none;
-        border-color: var(--color-accent);
-        box-shadow: 0 0 20px var(--color-accent-glow);
-      }
-
-      .contact-form input::placeholder,
-      .contact-form textarea::placeholder {
-        color: var(--color-muted);
-      }
-
-      .contact-form textarea {
-        min-height: 120px;
-        resize: vertical;
-      }
-
-      .contact-form button {
-        background: var(--color-accent);
-        color: white;
-        border: none;
-        border-radius: 8px;
-        padding: 0.875rem 1.5rem;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.2s ease;
-        justify-self: start;
-      }
-
-      .contact-form button:hover {
-        background: #2563eb;
-        transform: translateY(-1px);
-      }
-
-      .contact-form button:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
-        transform: none;
-      }
-
-      .form-status {
-        font-size: 0.9rem;
-        color: var(--color-muted);
-        min-height: 1.2em;
-      }
-
-      .form-status.success { color: #34d399; }
-      .form-status.error { color: #f87171; }
-
-      .about {
-        background: var(--color-surface);
-        border: 1px solid var(--color-border);
-        border-left: 3px solid var(--color-accent);
-        border-radius: 12px;
-        padding: 1.75rem 2rem;
-        margin-bottom: 4rem;
-      }
-
-      .about p {
-        color: var(--color-text);
-        line-height: 1.7;
-        font-size: 1rem;
-      }
-
-      .about p + p {
-        margin-top: 0.75rem;
-        color: var(--color-muted);
-      }
-
-      .work {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .work-item {
-        background: var(--color-surface);
-        border: 1px solid var(--color-border);
-        border-radius: 10px;
-        padding: 1.25rem 1.5rem;
-        transition: border-color 0.2s ease;
-      }
-
-      .work-item:hover {
-        border-color: var(--color-accent);
-      }
-
-      .work-item h3 {
-        font-size: 1rem;
-        margin-bottom: 0.35rem;
-      }
-
-      .work-item h3 a {
-        color: var(--color-text);
-        text-decoration: none;
-      }
-
-      .work-item h3 a:hover {
-        color: var(--color-accent);
-      }
-
-      .work-item p {
-        font-size: 0.9rem;
-        color: var(--color-muted);
-        line-height: 1.5;
-      }
-
-      .cta-pitch {
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.02));
-        border: 1px solid var(--color-border);
-        border-radius: 12px;
-        padding: 2rem;
-        text-align: center;
-      }
-
-      .cta-pitch p {
-        color: var(--color-text);
-        font-size: 1.05rem;
-        margin-bottom: 1.5rem;
-        max-width: 560px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .cta-buttons {
-        display: flex;
-        gap: 0.75rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .btn-primary, .btn-secondary {
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        text-decoration: none;
-        display: inline-block;
-        transition: all 0.2s ease;
-        border: 1px solid transparent;
-      }
-
-      .btn-primary {
-        background: var(--color-accent);
-        color: white;
-      }
-
-      .btn-primary:hover {
-        background: #2563eb;
-        box-shadow: 0 0 40px var(--color-warm-glow), 0 0 20px var(--color-accent-glow);
-      }
-
-      .btn-secondary {
-        background: transparent;
-        border-color: var(--color-accent);
-        color: var(--color-accent);
-      }
-
-      .btn-secondary:hover {
-        background: var(--color-accent);
-        color: white;
-      }
-
-      .contact-trigger {
-        background: transparent;
-        border: 1px solid var(--color-accent);
-        color: var(--color-accent);
-        padding: 0.5rem 1.25rem;
-        border-radius: 6px;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .contact-trigger:hover {
-        background: var(--color-accent);
-        color: white;
-        box-shadow: 0 0 30px var(--color-accent-glow);
-      }
-
-      .form-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(8px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 1000;
-      }
-
-      .form-overlay.active {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .form-modal {
-        background: var(--color-surface);
-        border: 1px solid var(--color-border);
-        border-radius: 16px;
-        padding: 2.5rem;
-        width: 90%;
-        max-width: 450px;
-        transform: translateY(20px) scale(0.95);
-        transition: all 0.3s ease;
-        position: relative;
-      }
-
-      .form-overlay.active .form-modal {
-        transform: translateY(0) scale(1);
-      }
-
-      .form-close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: none;
-        border: none;
-        color: var(--color-muted);
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: color 0.2s ease;
-        line-height: 1;
-      }
-
-      .form-close:hover {
-        color: var(--color-text);
-      }
-
-      .form-modal h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .form-subtitle {
-        color: var(--color-muted);
-        margin-bottom: 1.5rem;
-      }
-
-      .form-modal .contact-form {
-        margin-top: 0;
-        max-width: none;
-      }
-
-      @media (max-width: 700px) {
-        main {
-          padding: 2rem 1.5rem;
-        }
-
-        .hero {
-          grid-template-columns: 1fr;
-          text-align: center;
-          gap: 1.5rem;
-        }
-
-        .headshot {
-          margin: 0 auto;
-        }
-
-        .tagline {
-          margin: 0 auto;
-        }
-
-        .hero-text h1 {
-          font-size: 2.5rem;
-        }
-
-        .headshot {
-          width: 140px;
-          height: 140px;
-        }
-
-        .specialties {
-          grid-template-columns: 1fr;
-        }
-
-        .contact-links {
-          flex-direction: column;
-          gap: 1rem;
-          align-items: flex-start;
-        }
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <main>
-      <header class="hero">
-        <img src="/james.png" alt="James Hazelton" class="headshot" />
-        <div class="hero-text">
-          <h1>{name}</h1>
-          <p class="title">{title}</p>
-          <p class="tagline">{tagline}</p>
-        </div>
-      </header>
-
-      <section class="about">
-        <p>15 years across operations roles — recruiter, ops manager, sales leader. I've been the rep using the tools, the manager reading the reports, and the builder fixing what wasn't working.</p>
-        <p>I don't just understand revenue systems in theory. I've lived inside the problems they're supposed to solve. Hazelton Resources is for companies outgrowing their spreadsheets but not ready for a full-time ops hire — if your pipeline generation is manual and your CRM is full of data nobody trusts, that's my lane.</p>
-      </section>
-
-      <section>
-        <h2><span class="num">01</span> What I Do</h2>
-        <div class="specialties">
-          {specialties.map((s) => (
-            <div class="specialty">
-              <h3>{s.title}</h3>
-              <p>{s.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2><span class="num">02</span> Recent Work</h2>
-        <div class="work">
-          {recentWork.map((w) => (
-            <div class="work-item">
-              <h3>
-                {w.href ? <a href={w.href} target="_blank" rel="noopener">{w.title} →</a> : w.title}
-              </h3>
-              <p>{w.blurb}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2><span class="num">03</span> Work With Me</h2>
-        <div class="cta-pitch">
-          <p>Engagements that ship something real — a working system, a rebuilt pipeline, a data layer that replaces a vendor you've been overpaying for. Short enough to fit between quarters, sharp enough to move a number.</p>
-          <div class="cta-buttons">
-            <a href={bookingUrl} target="_blank" rel="noopener" class="btn-primary">Book a call now</a>
-            <button class="btn-secondary" id="contactTrigger">Send a message</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact">
-        <h2><span class="num">04</span> Connect</h2>
-        <div class="contact-links">
-          <a href={linkedin} target="_blank" rel="noopener">LinkedIn</a>
-          <a href={github} target="_blank" rel="noopener">GitHub</a>
-        </div>
-        <div class="form-overlay" id="formOverlay">
-          <div class="form-modal">
-            <button class="form-close" id="formClose">&times;</button>
-            <h3>Let's Talk</h3>
-            <p class="form-subtitle">Tell me about your project or idea</p>
-            <form class="contact-form" id="contactForm" novalidate>
-              <input type="text" name="firstname" placeholder="Your name" required />
-              <input type="email" name="email" placeholder="Your email" required />
-              <input type="tel" name="phone" placeholder="Your phone (optional)" />
-              <textarea name="message" placeholder="What can I help you with?" required></textarea>
-              <button type="submit" id="submitBtn">Send Message</button>
-              <p class="form-status" id="formStatus"></p>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-    <script>
-      const trigger = document.getElementById('contactTrigger');
-      const overlay = document.getElementById('formOverlay');
-      const closeBtn = document.getElementById('formClose');
-
-      trigger.addEventListener('click', () => {
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      });
-
-      const closeModal = () => {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-      };
-
-      closeBtn.addEventListener('click', closeModal);
-      overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) closeModal();
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-      });
-
-      const PORTAL_ID = '245729528';
-      const FORM_ID = '3efb7409-46dd-4299-812d-1e5e850e5a8a';
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
-      const submitBtn = document.getElementById('submitBtn');
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const fd = new FormData(form);
-        const fields = ['firstname', 'email', 'phone', 'message']
-          .map((name) => ({ name, value: String(fd.get(name) || '') }))
-          .filter((f) => f.value.length > 0);
-
-        // HubSpot tracking cookie (if the tracking script has loaded)
-        const hutk = document.cookie.split('; ').find((c) => c.startsWith('hubspotutk='))?.split('=')[1];
-
-        const body = {
-          fields,
-          context: {
-            pageUri: window.location.href,
-            pageName: document.title,
-            ...(hutk ? { hutk } : {}),
-          },
-        };
-
-        submitBtn.disabled = true;
-        status.className = 'form-status';
-        status.textContent = 'Sending…';
-
-        try {
-          const r = await fetch(
-            `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_ID}`,
-            {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(body),
-            }
-          );
-          if (!r.ok) throw new Error(`${r.status}: ${await r.text()}`);
-          status.className = 'form-status success';
-          status.textContent = "Thanks — I'll be in touch shortly.";
-          form.reset();
-        } catch (err) {
-          console.error(err);
-          status.className = 'form-status error';
-          status.textContent = 'Something broke. Email james@hazeltonres.com directly.';
-        } finally {
-          submitBtn.disabled = false;
-        }
-      });
-    </script>
+    <div class="card">
+      <h1>Hazelton Senior Citizens</h1>
+      <div class="address">
+        PO Box 333<br />
+        Hazelton, ND 58544
+      </div>
+      <hr class="divider" />
+      <p class="status">Our website is currently under construction.<br />Check back soon.</p>
+      <hr class="divider" />
+      <div class="contact">
+        <p class="contact-label">Contact</p>
+        <a href="mailto:james@hazeltonres.com">james@hazeltonres.com</a>
+      </div>
+    </div>
   </body>
 </html>
