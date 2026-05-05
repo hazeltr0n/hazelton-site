@@ -1,4 +1,131 @@
 ---
+const bookingUrl = "https://meetings-na2.hubspot.com/james-hazelton";
+const linkedin = "https://www.linkedin.com/in/hazeltron/";
+const github = "https://github.com/hazeltr0n";
+
+const stats = [
+  { number: "$20M", label: "P&L managed" },
+  { number: "240", label: "hrs/week eliminated via AI" },
+  { number: "100K+", label: "job postings scanned daily" },
+  { number: "15+", label: "years in the industry" },
+];
+
+const experience = [
+  {
+    period: "May 2024 – Apr 2026",
+    company: "FreeWorld",
+    companyType: "SaaS Platform / Workforce Tech — Remote",
+    title: "Head of Employer Partnerships",
+    context: "Led GTM strategy and built the employer partnerships function for a platform helping people with criminal records earn CDLs and enter trucking. $150K marketing budget, 20+ events/year, team of 3.",
+    bullets: [
+      "<strong>$0 to first revenue in under 90 days</strong> — designed and executed the company's initial monetization motion ($500/placement model).",
+      "<strong>Architected and shipped solo</strong> an AI job-matching pipeline scanning 100K+ postings daily via LLM analysis, eliminating 240 hrs/week of manual work across the org. No engineering support.",
+      "Built a multi-source lead intelligence engine: FMCSA data (2.4M-carrier database), 100K+ weekly job postings, hiring history — custom ICP scoring model with weighted signal stacking and tiered outreach playbooks.",
+      "Generated 250+ employer placements, then converted the partnership pipeline into a paid model — validating PMF.",
+    ],
+  },
+  {
+    period: "Jan 2023 – May 2024",
+    company: "F|Staff",
+    companyType: "Logistics SaaS / On-Demand Driver Marketplace — Texas",
+    title: "Sales Leader, Carrier Partnerships",
+    context: "Led commercial growth for a platform enabling shippers to dispatch on-demand drivers in under an hour. Full sales cycle: prospecting, live demos, customer success, enterprise expansion. Team of 4.",
+    bullets: [
+      "<strong>Grew Ryder enterprise account 30%</strong> by mapping the full buying committee and executing targeted outreach via a custom LinkedIn scraping + data enrichment pipeline — zero tooling budget, no ZoomInfo.",
+      "Ran live SaaS demos where buyers placed real orders and watched drivers accept in real time. Closed deals.",
+      "Delivered enterprise onboarding and customer success post-sale, driving expansion revenue and retention.",
+    ],
+  },
+  {
+    period: "Sep 2021 – Jan 2023",
+    company: "Casual Driver Leasing Services",
+    companyType: "Dallas–Fort Worth",
+    title: "Business Development Manager",
+    context: "First pure-sales role after years in operations and recruiting leadership. High-volume field territory across DFW. Managed 2 SDRs.",
+    bullets: [
+      "Closed enterprise deals with <strong>Ryder and HEB</strong> through disciplined territory coverage and relationship building.",
+      "Built a systematic territory map and field prospecting cadence — knocking 600+ target accounts per month in person.",
+    ],
+  },
+  {
+    period: "Aug 2019 – Sep 2021",
+    company: "Empire Workforce",
+    companyType: "",
+    title: "Recruiting Manager — Transportation Division",
+    context: "Built the transportation staffing division from the ground up. Led 4 recruiters + 1 processor through COVID-19 using scrappy, low-cost tactics.",
+    bullets: [
+      "Converted existing light-industrial client portfolio into a <strong>$5M revenue stream in Year 1.</strong>",
+      "Closed <strong>Maersk</strong> and other enterprise logistics accounts via cross-selling into existing relationships.",
+    ],
+  },
+  {
+    period: "2017 – 2019",
+    company: "BCB Transport, LLC",
+    companyType: "350-truck fleet",
+    title: "Recruiting Manager",
+    context: "Led recruiting for a 350-truck fleet. Managed 2 recruiters and 1 processor. Tech stack: Tenstreet.",
+    bullets: [
+      "Cut <strong>$30K/month in recruiting costs</strong> by replacing expensive channels with a driver referral program and organic social strategy.",
+      "Kept the full fleet seated through high-volume recruiting and retention initiatives.",
+    ],
+  },
+  {
+    period: "2015 – 2017",
+    company: "Duende Trucking LLC",
+    companyType: "50-truck fleet, ~100 employees",
+    title: "Regional Operations Manager",
+    context: "Full P&L responsibility. Oversaw operations, recruiting, dispatch, and field sales.",
+    bullets: [
+      "Closed enterprise accounts with <strong>Delek and Marathon Energy</strong> while managing full operations.",
+    ],
+  },
+  {
+    period: "2013 – 2015",
+    company: "Premier Tanker Services, Ltd.",
+    companyType: "$20M P&L · 200+ employees · 150-truck fleet · 3 terminals",
+    title: "Regional Operations Manager",
+    context: "Largest leadership role to date. Direct reports: 3 Ops Managers, 9 Dispatchers, 15 Mechanics. 300 drivers and a full recruiting function.",
+    bullets: [
+      "<strong>Grew revenue 25%</strong> with no added trucks or headcount via aggressive customer repricing strategy.",
+      "Closed <strong>ENERVEST and Total</strong> through hands-on field sales while simultaneously managing full operations.",
+    ],
+  },
+];
+
+const skills = [
+  {
+    group: "Sales & RevOps",
+    tags: [
+      { label: "HubSpot CRM", certified: true },
+      { label: "HubSpot Sales Hub", certified: true },
+      { label: "HubSpot RevOps", certified: true },
+      { label: "Tenstreet" },
+      { label: "LinkedIn Sales Navigator" },
+    ],
+  },
+  {
+    group: "Engineering & Data",
+    tags: [
+      { label: "Python" },
+      { label: "SQL" },
+      { label: "PostgreSQL" },
+      { label: "Web scraping" },
+      { label: "REST APIs" },
+      { label: "Custom ETL" },
+      { label: "FMCSA data integration" },
+    ],
+  },
+  {
+    group: "AI & Automation",
+    tags: [
+      { label: "LLM workflow automation" },
+      { label: "AI lead scoring & enrichment" },
+      { label: "Prompt engineering" },
+      { label: "Build-vs-buy analysis" },
+      { label: "Custom tooling" },
+    ],
+  },
+];
 ---
 
 <html lang="en">
@@ -6,101 +133,778 @@
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Hazelton Senior Citizens — Hazelton, North Dakota" />
-    <title>Hazelton Senior Citizens</title>
+    <meta name="description" content="James Hazelton — Sales leader who builds the systems his team runs on. 15+ years in trucking, logistics SaaS, and workforce tech." />
+    <title>James Hazelton | Sales Leader · RevOps · GTM</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hazeltonres.com" />
+    <meta property="og:title" content="James Hazelton | Sales Leader · RevOps · GTM" />
+    <meta property="og:description" content="Sales leader who builds the systems his team runs on. 15+ years in trucking, logistics SaaS, and workforce tech." />
+    <meta property="og:image" content="https://hazeltonres.com/james.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="James Hazelton | Sales Leader · RevOps · GTM" />
+    <meta name="twitter:description" content="Sales leader who builds the systems his team runs on." />
+    <meta name="twitter:image" content="https://hazeltonres.com/james.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/245729528.js"></script>
+
     <style>
-      * {
+      *, *::before, *::after {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
       }
+
+      :root {
+        --bg:           #0a0a0a;
+        --surface:      #141414;
+        --border:       #2a2a2a;
+        --border-hover: #3a3a3a;
+        --text:         #f5f5f5;
+        --muted:        #888;
+        --faint:        #444;
+        --blue:         #3b82f6;
+        --blue-glow:    rgba(59, 130, 246, 0.15);
+        --warm:         #d97706;
+        --warm-glow:    rgba(217, 119, 6, 0.18);
+        --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        --font-serif:   'Playfair Display', Georgia, serif;
+        --max-width:    860px;
+      }
+
+      html { scroll-behavior: smooth; }
 
       body {
-        font-family: Georgia, 'Times New Roman', serif;
-        background: #f9f6f1;
-        color: #2c2c2c;
+        font-family: var(--font-sans);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
         min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
+        -webkit-font-smoothing: antialiased;
       }
 
-      .card {
-        text-align: center;
-        max-width: 480px;
-        width: 100%;
+      @supports (animation-timeline: view()) {
+        @media (prefers-reduced-motion: no-preference) {
+          .fade-in {
+            animation: fadeUp linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 40%;
+          }
+        }
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      main {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 4rem 2rem 6rem;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 2.75rem;
+        align-items: center;
+        margin-bottom: 4rem;
+        padding-bottom: 3.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .headshot {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--border);
+        box-shadow: 0 0 60px var(--blue-glow), 0 0 30px var(--warm-glow);
+      }
+
+      .hero-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--blue);
+        font-weight: 600;
+        margin-bottom: 0.6rem;
       }
 
       h1 {
-        font-size: 2rem;
-        font-weight: normal;
-        letter-spacing: 0.02em;
-        margin-bottom: 0.5rem;
-        color: #1a1a1a;
+        font-family: var(--font-serif);
+        font-size: clamp(2.4rem, 5vw, 3.4rem);
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+        margin-bottom: 0.9rem;
+        color: var(--text);
       }
 
-      .address {
+      .hero-tagline {
         font-size: 1rem;
-        color: #555;
-        line-height: 1.8;
-        margin-bottom: 2rem;
-      }
-
-      .divider {
-        border: none;
-        border-top: 1px solid #ccc;
-        margin: 1.5rem auto;
-        width: 60px;
-      }
-
-      .status {
-        font-size: 1rem;
-        color: #666;
-        font-style: italic;
+        color: var(--muted);
+        max-width: 480px;
+        line-height: 1.65;
         margin-bottom: 1.5rem;
+      }
+
+      .hero-tagline strong { color: var(--text); }
+
+      .hero-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.25rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .hero-links a {
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .hero-links a:hover { color: var(--blue); }
+
+      /* ── STATS ── */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-bottom: 4rem;
+        padding: 2rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat { text-align: center; }
+
+      .stat-number {
+        font-family: var(--font-sans);
+        font-weight: 800;
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        color: var(--warm);
+        line-height: 1;
+        margin-bottom: 0.4rem;
+        letter-spacing: -0.03em;
+      }
+
+      .stat-label {
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        line-height: 1.4;
+      }
+
+      /* ── SECTION CHROME ── */
+      section { margin-bottom: 4rem; }
+
+      .section-heading {
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: baseline;
+        gap: 0.65rem;
+      }
+
+      .section-heading .num {
+        font-family: var(--font-serif);
+        font-size: 1.1rem;
+        text-transform: none;
+        letter-spacing: 0;
+        color: var(--warm);
+        font-weight: 400;
+      }
+
+      /* ── DIFFERENTIATOR ── */
+      .diff {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--blue);
+        border-radius: 12px;
+        padding: 1.75rem 2rem;
+        font-size: 1rem;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .diff strong { color: var(--text); }
+      .diff p + p { margin-top: 1rem; }
+
+      /* ── EXPERIENCE ── */
+      .jobs {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .job {
+        display: grid;
+        grid-template-columns: 170px 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .job:last-child { border-bottom: none; }
+
+      .job-meta { padding-top: 0.1rem; }
+
+      .job-period {
+        font-size: 0.78rem;
+        color: var(--faint);
+        letter-spacing: 0.03em;
+        line-height: 1.5;
+        margin-bottom: 0.3rem;
+      }
+
+      .job-company {
+        font-size: 0.85rem;
+        color: var(--warm);
+        line-height: 1.4;
+      }
+
+      .job-company-type {
+        font-size: 0.75rem;
+        color: var(--faint);
+        margin-top: 0.2rem;
+        line-height: 1.4;
+      }
+
+      .job-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.4rem;
+      }
+
+      .job-context {
+        font-size: 0.82rem;
+        color: var(--muted);
+        margin-bottom: 0.85rem;
+        line-height: 1.55;
+      }
+
+      .job-bullets {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+      }
+
+      .job-bullets li {
+        font-size: 0.85rem;
+        color: var(--muted);
+        padding-left: 1.1rem;
+        position: relative;
         line-height: 1.6;
       }
 
-      .contact {
-        font-size: 0.95rem;
-        color: #555;
+      .job-bullets li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: var(--blue);
+        font-size: 0.75rem;
+        top: 0.15em;
       }
 
-      .contact-label {
-        font-size: 0.75rem;
+      .job-bullets li strong { color: var(--text); }
+
+      /* ── SKILLS ── */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .skill-group-title {
+        font-size: 0.72rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: #999;
-        margin-bottom: 0.4rem;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: var(--muted);
+        font-weight: 600;
+        margin-bottom: 0.85rem;
       }
 
-      .contact a {
-        color: #4a7c59;
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+      }
+
+      .skill-tag {
+        font-size: 0.75rem;
+        color: var(--muted);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 0.2rem 0.55rem;
+        line-height: 1.5;
+      }
+
+      .skill-tag.certified {
+        border-color: var(--warm);
+        color: var(--warm);
+      }
+
+      /* ── CTA ── */
+      .cta-block {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.07), rgba(217, 119, 6, 0.04));
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 2.5rem;
+        text-align: center;
+      }
+
+      .cta-block p {
+        font-size: 1.05rem;
+        color: var(--muted);
+        max-width: 540px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary, .btn-secondary {
+        padding: 0.7rem 1.5rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
         text-decoration: none;
-        font-size: 1rem;
+        display: inline-block;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
       }
 
-      .contact a:hover {
-        text-decoration: underline;
+      .btn-primary {
+        background: var(--blue);
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background: #2563eb;
+        box-shadow: 0 0 30px var(--blue-glow);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        border-color: var(--blue);
+        color: var(--blue);
+        font-family: var(--font-sans);
+      }
+
+      .btn-secondary:hover {
+        background: var(--blue);
+        color: #fff;
+      }
+
+      /* ── CONNECT ── */
+      .connect-links {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .connect-links a {
+        color: var(--blue);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .connect-links a:hover { color: #60a5fa; }
+
+      /* ── MODAL ── */
+      .form-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .form-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .form-modal {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2.5rem;
+        width: 90%;
+        max-width: 440px;
+        transform: translateY(20px) scale(0.96);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .form-overlay.active .form-modal {
+        transform: translateY(0) scale(1);
+      }
+
+      .form-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: var(--muted);
+        font-size: 1.5rem;
+        cursor: pointer;
+        line-height: 1;
+        transition: color 0.2s;
+      }
+
+      .form-close:hover { color: var(--text); }
+
+      .form-modal h3 {
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 0.35rem;
+        background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .form-subtitle {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-form {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+        color: var(--text);
+        font-family: var(--font-sans);
+        transition: border-color 0.2s, box-shadow 0.2s;
+        width: 100%;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        outline: none;
+        border-color: var(--blue);
+        box-shadow: 0 0 20px var(--blue-glow);
+      }
+
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder { color: var(--faint); }
+
+      .contact-form textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      .contact-form button[type="submit"] {
+        background: var(--blue);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: var(--font-sans);
+        transition: background 0.2s, transform 0.2s;
+        justify-self: start;
+      }
+
+      .contact-form button[type="submit"]:hover {
+        background: #2563eb;
+        transform: translateY(-1px);
+      }
+
+      .contact-form button[type="submit"]:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .form-status {
+        font-size: 0.85rem;
+        color: var(--muted);
+        min-height: 1.2em;
+      }
+
+      .form-status.success { color: #34d399; }
+      .form-status.error   { color: #f87171; }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 640px) {
+        main { padding: 2.5rem 1.25rem 4rem; }
+
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 1.5rem;
+        }
+
+        .headshot { margin: 0 auto; width: 130px; height: 130px; }
+        .hero-tagline { margin: 0 auto 1.5rem; }
+        .hero-links { justify-content: center; }
+
+        .stats { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+        .job {
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+        }
+
+        .job-meta { display: flex; gap: 0.75rem; align-items: baseline; flex-wrap: wrap; }
+        .job-period { margin-bottom: 0; }
+
+        .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+        .cta-block { padding: 1.75rem 1.25rem; }
       }
     </style>
   </head>
   <body>
-    <div class="card">
-      <h1>Hazelton Senior Citizens</h1>
-      <div class="address">
-        PO Box 333<br />
-        Hazelton, ND 58544
+    <main>
+
+      <!-- HERO -->
+      <header class="hero">
+        <img src="/james.png" alt="James Hazelton" class="headshot" />
+        <div class="hero-text">
+          <p class="hero-eyebrow">Sales Leader · Revenue Operations · GTM Strategy</p>
+          <h1>James Hazelton</h1>
+          <p class="hero-tagline">
+            The rare commercial leader who closes enterprise deals
+            <strong>and builds the systems his team runs on.</strong>
+            15+ years in trucking, logistics SaaS, and workforce tech.
+          </p>
+          <div class="hero-links">
+            <a href="mailto:james@hazeltonres.com">james@hazeltonres.com</a>
+            <span>·</span>
+            <a href="tel:5802773883">580-277-3883</a>
+            <span>·</span>
+            <a href={linkedin} target="_blank" rel="noopener">LinkedIn</a>
+            <span>·</span>
+            <span>Dallas–Fort Worth, TX</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- STATS -->
+      <div class="stats fade-in">
+        {stats.map((s) => (
+          <div class="stat">
+            <div class="stat-number">{s.number}</div>
+            <div class="stat-label">{s.label}</div>
+          </div>
+        ))}
       </div>
-      <hr class="divider" />
-      <p class="status">Our website is currently under construction.<br />Check back soon.</p>
-      <hr class="divider" />
-      <div class="contact">
-        <p class="contact-label">Contact</p>
-        <a href="mailto:james@hazeltonres.com">james@hazeltonres.com</a>
+
+      <!-- WHAT I DO DIFFERENTLY -->
+      <section class="fade-in">
+        <h2 class="section-heading"><span class="num">01</span> What I do differently</h2>
+        <div class="diff">
+          <p>
+            Most sales leaders manage a CRM. I build them. I've spent 15 years at the intersection of
+            <strong>trucking operations, enterprise sales, and revenue systems</strong> — owning P&Ls,
+            coaching teams, and closing accounts like Ryder, HEB, Maersk, Delek, Marathon, ENERVEST, and Total.
+          </p>
+          <p>
+            What sets me apart: I write the code. At FreeWorld I architected an AI-powered job-matching
+            pipeline that scanned 100K+ postings daily, ran LLM-based analysis, and surfaced ranked
+            opportunities for the team — <strong>eliminating 240 hours/week of manual work, built
+            solo, no engineering support.</strong> I make build-vs-buy decisions, design ICP scoring
+            models, and ship custom tooling when the vendor alternative costs $50K/year and delivers less.
+          </p>
+          <p>
+            I'm the person you hire when you need a sales leader who can
+            <strong>design the GTM motion and build the infrastructure it runs on.</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="fade-in">
+        <h2 class="section-heading"><span class="num">02</span> Experience</h2>
+        <div class="jobs">
+          {experience.map((job) => (
+            <div class="job">
+              <div class="job-meta">
+                <div class="job-period">{job.period}</div>
+                <div class="job-company">{job.company}</div>
+                {job.companyType && <div class="job-company-type">{job.companyType}</div>}
+              </div>
+              <div>
+                <div class="job-title">{job.title}</div>
+                {job.context && <div class="job-context">{job.context}</div>}
+                <ul class="job-bullets">
+                  {job.bullets.map((b) => (
+                    <li><span set:html={b} /></li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="fade-in">
+        <h2 class="section-heading"><span class="num">03</span> Technical Skills</h2>
+        <div class="skills-grid">
+          {skills.map((group) => (
+            <div>
+              <p class="skill-group-title">{group.group}</p>
+              <div class="skill-tags">
+                {group.tags.map((tag) => (
+                  <span class={`skill-tag${tag.certified ? ' certified' : ''}`}>
+                    {tag.label}{tag.certified ? ' ✓' : ''}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="fade-in">
+        <h2 class="section-heading"><span class="num">04</span> Work with me</h2>
+        <div class="cta-block">
+          <p>
+            If you're building something in trucking, logistics, or workforce tech and need a commercial
+            leader who can run the GTM <em>and</em> build the systems — let's talk.
+          </p>
+          <div class="cta-buttons">
+            <a href={bookingUrl} target="_blank" rel="noopener" class="btn-primary">Book a call</a>
+            <button class="btn-secondary" id="contactTrigger">Send a message</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONNECT -->
+      <section class="fade-in">
+        <h2 class="section-heading"><span class="num">05</span> Connect</h2>
+        <div class="connect-links">
+          <a href={linkedin} target="_blank" rel="noopener">LinkedIn</a>
+          <a href={github} target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:james@hazeltonres.com">james@hazeltonres.com</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- CONTACT MODAL -->
+    <div class="form-overlay" id="formOverlay">
+      <div class="form-modal">
+        <button class="form-close" id="formClose">&times;</button>
+        <h3>Let's Talk</h3>
+        <p class="form-subtitle">Tell me about your project or role</p>
+        <form class="contact-form" id="contactForm" novalidate>
+          <input type="text"  name="firstname" placeholder="Your name"              required />
+          <input type="email" name="email"     placeholder="Your email"             required />
+          <input type="tel"   name="phone"     placeholder="Phone (optional)" />
+          <textarea           name="message"   placeholder="What can I help with?"  required></textarea>
+          <button type="submit" id="submitBtn">Send Message</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
       </div>
     </div>
+
+    <script>
+      const trigger  = document.getElementById('contactTrigger');
+      const overlay  = document.getElementById('formOverlay');
+      const closeBtn = document.getElementById('formClose');
+
+      const openModal  = () => { overlay.classList.add('active');    document.body.style.overflow = 'hidden'; };
+      const closeModal = () => { overlay.classList.remove('active'); document.body.style.overflow = '';       };
+
+      trigger.addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+      overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+      const PORTAL_ID = '245729528';
+      const FORM_ID   = '3efb7409-46dd-4299-812d-1e5e850e5a8a';
+      const form      = document.getElementById('contactForm');
+      const status    = document.getElementById('formStatus');
+      const submitBtn = document.getElementById('submitBtn');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const fd     = new FormData(form);
+        const fields = ['firstname', 'email', 'phone', 'message']
+          .map((n) => ({ name: n, value: String(fd.get(n) || '') }))
+          .filter((f) => f.value.length > 0);
+
+        const hutk = document.cookie
+          .split('; ')
+          .find((c) => c.startsWith('hubspotutk='))
+          ?.split('=')[1];
+
+        submitBtn.disabled  = true;
+        status.className    = 'form-status';
+        status.textContent  = 'Sending…';
+
+        try {
+          const r = await fetch(
+            `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_ID}`,
+            {
+              method:  'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body:    JSON.stringify({
+                fields,
+                context: { pageUri: window.location.href, pageName: document.title, ...(hutk ? { hutk } : {}) },
+              }),
+            }
+          );
+          if (!r.ok) throw new Error(`${r.status}: ${await r.text()}`);
+          status.className   = 'form-status success';
+          status.textContent = "Thanks — I'll be in touch shortly.";
+          form.reset();
+        } catch (err) {
+          console.error(err);
+          status.className   = 'form-status error';
+          status.textContent = 'Something broke. Email james@hazeltonres.com directly.';
+        } finally {
+          submitBtn.disabled = false;
+        }
+      });
+    </script>
   </body>
 </html>
